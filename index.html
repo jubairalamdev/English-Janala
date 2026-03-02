@@ -10,7 +10,9 @@
     <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
 
     <!-- Font awesome CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- DaisyUI CDN -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
@@ -24,7 +26,7 @@
             font-family: "Poppins", sans-serif;
             font-style: normal;
         }
- 
+
         .hind-siliguri-font {
             font-family: "Hind Siliguri", sans-serif;
             font-style: normal;
@@ -35,6 +37,75 @@
 </head>
 
 <body>
+
+    <!-- header section -->
+    <header class="">
+        <div class=" mx-auto bg-base-100 shadow-sm">
+            <div class="container mx-auto max-w-[1440px] navbar">
+
+
+                <div class="navbar-start">
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul tabindex="-1"
+                            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                            <li>
+                                <button class="">
+                                    <i class="fa-solid fa-circle-question"></i>
+                                    FAQ
+                                </button>
+                            </li>
+                            <li>
+                                <button class="">
+                                    <i class="fa-solid fa-book-open"></i>
+                                    Learn
+                                </button>
+                            </li>
+                            <li>
+                                <button class="">
+                                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                                    Log Out
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="/index.html" class="flex items-center gap-1">
+                        <span class="text-lg font-bold">English</span>
+                        <img src="./assets/logo.png" alt="logo">
+                        <span class="hind-siliguri-font font-bold">জানালা</span>
+                    </a>
+                </div>
+                <div class="navbar-end hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1 space-x-4">
+                        <li>
+                            <button class="btn btn-outline btn-primary">
+                                <i class="fa-solid fa-circle-question"></i>
+                                FAQ
+                            </button>
+                        </li>
+                        <li>
+                            <button class="btn btn-outline btn-primary">
+                                <i class="fa-solid fa-book-open"></i>
+                                Learn
+                            </button>
+                        </li>
+                        <li>
+                            <button class="btn btn-outline btn-primary">
+                                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                                Log Out
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
 
 </body>
 
