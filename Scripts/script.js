@@ -36,10 +36,10 @@ const loadLevelWord = (level_no) => {
     fetch(url)
         .then(res => res.json())
         .then(data => displayLevelWord(data.data))
-    loading(false)
 }
 
 const displayLevelWord = (words) => {
+    loading(false);
     const wordContainer = document.getElementById("word-container");
     wordContainer.innerHTML = "";
     if (words.length > 0) {
@@ -148,6 +148,7 @@ const showWordDetail = (wordDetail) => {
 loadLessons()
 
 document.getElementById("btn-search").addEventListener("click", () => {
+    loading(true);
   const input = document.getElementById("input-search");
   const searchValue = input.value.trim().toLowerCase();
 
@@ -158,7 +159,7 @@ document.getElementById("btn-search").addEventListener("click", () => {
       const filterWords = allWords.filter((word) =>
         word.word.toLowerCase().includes(searchValue)
       );
-
+      loading(false);
       displayLevelWord(filterWords);
     });
 });
