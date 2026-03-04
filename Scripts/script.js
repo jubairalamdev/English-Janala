@@ -12,6 +12,7 @@ const loadLessons = () => {
 
 const loading = (status) => {
         let wordContainer = document.getElementById("word-container");
+        wordContainer.classList.replace("md:grid-cols-4", "grid-cols-1")
         let loaderSection = `
             <section class="flex justify-center" id="loading-section">
                 <span class="loading loading-dots loading-xl text-primary"></span>
@@ -24,6 +25,7 @@ const loading = (status) => {
 
     else {
         wordContainer.innerHTML = "";
+        wordContainer.classList.replace("grid-cols-1", "md:grid-cols-4")
     }
 }
 
