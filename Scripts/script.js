@@ -49,10 +49,10 @@ const displayLevelWord = (words) => {
         words.forEach(word => {
             const card = document.createElement("div");
             card.innerHTML = `
-            <div class="bg-white rounded-xl shadow-sm text-center py-5 px-5 space-y-3">
+            <div class="bg-base-100 rounded-xl shadow-sm text-center py-5 px-5 space-y-3">
                 <h3 class="font-bold text-2xl">${word.word ? word.word : "শব্দ খুজে পাওয়া যায়নি।"}</h3>
                 <p class="font-semibold">Meaning of Pronunciation</p>
-                <div class="hind-siliguri-font text-2xl font-medium text-neutral-700">"${word.meaning ? word.meaning : "অর্থ খুজে পাওয়া যায়নি।"} / ${word.pronunciation ? word.pronunciation : "উচ্চারণ খুজে পাওয়া যায়নি।"}"</div>
+                <div class="hind-siliguri-font text-2xl font-medium text-base-content">"${word.meaning ? word.meaning : "অর্থ খুজে পাওয়া যায়নি।"} / ${word.pronunciation ? word.pronunciation : "উচ্চারণ খুজে পাওয়া যায়নি।"}"</div>
                 <div class="flex justify-between items-center">
                     <button class="btn" onclick="loadWordDetail(${word.id})"><i class="fa-solid fa-circle-info"></i></button>
                     <button class="btn" onclick="pronounceWord('${word.word}')"><i class="fa-solid fa-volume-high"></i></button>
@@ -113,12 +113,12 @@ const showWordDetail = (wordDetail) => {
     const modal = `
         <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
             <div class="modal-box  p-6">
-            <div class="p-2 border-2 border-blue-100/50 bg-blue-50/20">
+            <div class="p-2 border-2 border-blue-100/50 bg-primary/10 rounded-xl">
                 <h3 class="text-4xl font-bold">${wordDetail.word ? wordDetail.word:"শব্দ খুজে পাওয়া যায়নি।"}</h3>
                 <p class="pt-8 pb-3 text-2xl font-semibold">Meaning</p>
                 <p class="text-2xl font-medium hind-siliguri-font">${wordDetail.meaning ? wordDetail.meaning:"অর্থ খুঁজে পাওয়া যায়নি।"}</p>
                 <p class="pt-8 pb-3 text-2xl font-semibold">Example</p>
-                <p class="text-2xl font-medium text-gray-500">${wordDetail.sentence ? wordDetail.sentence:"উদাহরণ বাক্য খুঁজে পাওয়া যায়নি।"}</p>
+                <p class="text-2xl font-medium text-base-content">${wordDetail.sentence ? wordDetail.sentence:"উদাহরণ বাক্য খুঁজে পাওয়া যায়নি।"}</p>
                 <p class="pt-8 pb-3 text-2xl font-semibold">সমার্থক শব্দ গুলো</p>
                 <div id="synonyms-box" class="space-x-3">
                     
@@ -142,7 +142,7 @@ const showWordDetail = (wordDetail) => {
     let synonymsBox = document.getElementById("synonyms-box");
     synonymsBox.innerHTML = "";
     wordDetail.synonyms.map(synonym => {
-        synonymsBox.innerHTML += `<span class="badge px-4 py-4 bg-blue-100/70 border-blue-100 border-2">${synonym}</span>`
+        synonymsBox.innerHTML += `<span class="badge px-4 py-4 bg-primary/20 border-secondary/10 border-2 text-base-content">${synonym}</span>`
     })
     my_modal_5.showModal()
 }
